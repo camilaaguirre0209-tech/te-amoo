@@ -1,0 +1,115 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body, html {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: #020208;
+  font-family: 'Orbitron', sans-serif;
+  color: #fff;
+}
+
+#canvas-container {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+/* Pantalla de Inicio */
+#start-screen {
+  position: absolute;
+  inset: 0;
+  z-index: 100;
+  background: rgba(2, 2, 8, 0.98);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 1s ease;
+}
+
+.title {
+  font-size: 1.8rem;
+  text-align: center;
+  color: #00f3ff;
+  text-shadow: 0 0 15px #00f3ff;
+}
+
+.highlight-name {
+  font-family: 'Dancing Script', cursive;
+  font-size: 3.5rem;
+  color: #ff3377;
+  text-shadow: 0 0 20px #ff3377;
+}
+
+.subtitle {
+  margin: 15px 0 30px;
+  font-size: 0.8rem;
+  letter-spacing: 2px;
+  color: #a0e5ff;
+}
+
+.btn-neon {
+  padding: 12px 30px;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 0.85rem;
+  color: #00f3ff;
+  background: transparent;
+  border: 2px solid #00f3ff;
+  border-radius: 25px;
+  cursor: pointer;
+  box-shadow: 0 0 15px rgba(0, 243, 255, 0.4);
+}
+
+/* Carta / Modal */
+#card-modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.8);
+  width: 85%;
+  max-width: 420px;
+  background: rgba(8, 14, 28, 0.95);
+  border: 2px solid #ff3377;
+  border-radius: 20px;
+  padding: 25px;
+  text-align: center;
+  box-shadow: 0 0 30px rgba(255, 51, 119, 0.4);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.5s ease;
+  z-index: 200;
+}
+
+#card-modal.active {
+  opacity: 1;
+  pointer-events: all;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.card-title {
+  color: #00f3ff;
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+}
+
+.card-body {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.card-signature {
+  font-family: 'Dancing Script', cursive;
+  font-size: 1.5rem;
+  color: #ff3377;
+  margin-top: 10px;
+}

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Para Ángel</title>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Orbitron:wght@600;900&family=Quicksand:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <!-- Cargar Three.js en el head para garantizar que esté listo -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+</head>
+<body>
+
+  <!-- Canción -->
+  <audio id="bg-music" loop preload="auto">
+    <source src="canción.mp3.mp3" type="audio/mpeg">
+  </audio>
+
+  <!-- Pantalla de Bienvenida -->
+  <div id="start-screen">
+    <h1 class="title">PARA MI NOVIO<br><span class="highlight-name">ÁNGEL</span></h1>
+    <p class="subtitle">✨ UN INFINITO PARA TI ✨</p>
+    <button class="btn-neon" id="start-btn" type="button">ENTRAR</button>
+  </div>
+
+  <!-- Contenedor 3D Galaxia -->
+  <div id="canvas-container"></div>
+
+  <!-- Carta Modal -->
+  <div id="card-modal">
+    <h2 class="card-title">Para mi amor, Ángel ❤️</h2>
+    <div class="card-body">
+      <p>Espero que este día sea muy lindo para ti mi amor,de mi igual es primera vez regalando algo en esta fecha,espero te guste todo lo que hice,se que no es mucho o talvez no es lo que esperas pero te puedo jurar que lo hice con el mayor amor posible,Te amo y eso nunca lo olvides,nose que haria sin ti, te amo hasta el infinito y más alla,te hice un intento de infinito de nostros espero te guste</p>
+      <p>Gracias por ser mi compañero en cada paso que hago. Eres mi persona favorita, mi esperanza y mi todo.</p>
+      <p class="card-signature">Te amo infinitamente,<br><span>Tu novia</span></p>
+    </div>
+    <button class="btn-neon" id="close-btn" type="button">CERRAR CARTA</button>
+  </div>
+
+  <!-- Tu script al final del body -->
+  <script src="script.js"></script>
+</body>
+</html>
